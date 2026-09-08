@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AdminPowerShellHere]
+@="Open Administrator PowerShell Here"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\AdminPowerShellHere\command]
+@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process powershell.exe -Verb RunAs -ArgumentList '-NoExit','-Command','Set-Location -LiteralPath ''%V'''\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\AdminPowerShellHere]
+@="Open Administrator PowerShell Here"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\AdminPowerShellHere\command]
+@="powershell.exe -NoProfile -WindowStyle Hidden -Command \"Start-Process powershell.exe -Verb RunAs -ArgumentList '-NoExit','-Command','Set-Location -LiteralPath ''%1'''\""

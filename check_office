@@ -1,0 +1,33 @@
+# Checks office versions and returns what is being used - asks for PC name.
+$Computer = Read-Host "Enter PC Name"
+
+Invoke-Command -ComputerName $Computer -ScriptBlock {
+
+    $officeConfig = "HKLM:\SOFTWARE\Microsoft\Office\ClickToRun\Configuration"
+
+    Write-Host "`n=== OFFICE CHECK ===" -ForegroundColor Cyan
+
+    if (Test-Path $officeConfig) {
+
+        $config = Get-ItemProperty $officeConfig
+
+        $platform = $config.Platform
+        $version  = $config.VersionToReport
+
+        if ($platform -eq "x64") {
+            Write-Host "Office is 64-bit" -ForegroundColor Green
+        }
+        elseif ($platform -eq "x86") {
+            Write-Host "Office is 32-bit" -ForegroundColor Yellow
+        }
+        else {
+            Write-Host "Office platform found, but unclear: $platform" -ForegroundColor Red
+        }
+
+        Write-Host "Office Version: $version" -ForegroundColor Cyan
+    }
+    else {
+        Write-Host "Office Click-to-Run configuration not found." -ForegroundColor Red
+    }
+
+}

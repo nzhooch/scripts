@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Color codes
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+# Header
+printf "%-28s %-55s %-10s %s\n" "CONTAINER" "IMAGE" "STATUS" "MOUNTS"
+printf -- "--------------------------------------------------------------------------------------------------------------------------------------------------------------------\n"
+
+# Loop over all containers
+docker ps -aq | while read cid; do
+  name=$(docker inspect -f '{{.Name}}' "$cid" | sed 's|/||')
+  image=$(docker inspect -f '{{.Config.Image}}' "$cid")
+
+  # Truncate image to 55 characters max
+  short_image=$(echo "$image" | cut -c1-55)
+
+  # Get status and colorize
+  raw_status=$(docker inspect -f '{{.State.Status}}' "$cid")
+  if [ "$raw_status" = "running" ]; then
+    status="${GREEN}Up${NC}"
+  else
+    status="${RED}Exited${NC}"
+  fi
+
+  # Gather mounts
+  mounts=$(docker inspect "$cid" | jq -r '.[0].Mounts[]? | "\(.Source):\(.Destination)"' | paste -sd, -)
+
+  # Print the aligned row
+  printf "%-28s %-55s %-10b %s\n" "$name" "$short_image" "$status" "$mounts"
+done

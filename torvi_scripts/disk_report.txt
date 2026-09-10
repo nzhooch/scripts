@@ -1,0 +1,119 @@
+==== DRIVE LIST (with mountpoints) ====
+NAME                        SIZE MOUNTPOINT
+loop0                      73.9M /snap/core22/2111
+loop2                      63.8M /snap/core20/2582
+loop3                      63.8M /snap/core20/2599
+loop4                      50.8M /snap/snapd/25202
+loop5                      55.5M /snap/core18/2947
+loop6                       972K /snap/dust/19
+loop7                       2.9M /snap/http/35
+loop8                      55.5M /snap/core18/2940
+loop9                      49.3M /snap/snapd/24792
+loop10                     23.2M /snap/wormhole/509
+loop11                     73.9M /snap/core22/2082
+sda                         5.5T 
+`-sda1                      5.5T /mnt/data1
+sdb                         2.7T 
+`-sdb1                      2.7T /mnt/data2
+sdc                         3.6T 
+`-sdc1                      3.6T 
+sdd                       465.8G 
+`-jbodvg-jbodlv           931.5G /mnt/jbod1tb
+sde                       465.8G 
+`-jbodvg-jbodlv           931.5G /mnt/jbod1tb
+nvme1n1                   931.5G 
+|-nvme1n1p1                   1G /boot/efi
+|-nvme1n1p2                   2G /boot
+`-nvme1n1p3               928.5G 
+  `-ubuntu--vg-ubuntu--lv   100G /
+nvme0n1                   953.9G 
+`-nvme0n1p1               953.9G /mnt/data3
+
+==== DRIVE SIZES (disks only) ====
+NAME      SIZE MODEL
+loop0    73.9M 
+loop2    63.8M 
+loop3    63.8M 
+loop4    50.8M 
+loop5    55.5M 
+loop6     972K 
+loop7     2.9M 
+loop8    55.5M 
+loop9    49.3M 
+loop10   23.2M 
+loop11   73.9M 
+sda       5.5T ST6000DM003-2CY1
+sdb       2.7T ST3000DM008-2DM1
+sdc       3.6T Expansion Desk
+sdd     465.8G ASM1156-PM
+sde     465.8G ASM1156-PM
+nvme1n1 931.5G Samsung SSD 980 PRO 1TB
+nvme0n1 953.9G PC SN810 NVMe WDC 1024GB
+
+==== DISK USAGE (used / free space) ====
+Filesystem                         Size  Used Avail Use% Mounted on
+tmpfs                              6.3G   15M  6.3G   1% /run
+efivarfs                           438K  279K  155K  65% /sys/firmware/efi/efivars
+/dev/mapper/ubuntu--vg-ubuntu--lv   98G   70G   24G  75% /
+tmpfs                               32G     0   32G   0% /dev/shm
+tmpfs                              5.0M     0  5.0M   0% /run/lock
+/dev/nvme1n1p2                     2.0G  186M  1.7G  11% /boot
+/dev/nvme0n1p1                     938G  245G  646G  28% /mnt/data3
+/dev/nvme1n1p1                     1.1G   26M  1.1G   3% /boot/efi
+/dev/sda1                          5.5T  1.7T  3.5T  33% /mnt/data1
+/dev/sdb1                          2.7T  446G  2.2T  18% /mnt/data2
+//192.168.1.14/immichnas           3.6T  1.2T  2.4T  34% /mnt/data2/immich-backup
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/a19473eec749689803713a9d740d000efea154bd4fe1ee72508e5e4c6e356c59/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/1bc0b050ad5b89b24f47349bbd4dbfa7420ebcf943b8c95207fc582de06ba58c/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/bb95f22bc552294537f9f814e33c1a480f99cf0165b0900f2e0afc92ec122780/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/91c453f546a9fb9e51515944a008d6dfdf2951d74d1c27fdc0765cfbbadcca0c/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/03e06420ca368fc228db41ed7e5971e6368599a5837a92d0129b4ef41a23b765/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/302205e1931a2d488e9d1ac1526ce3a114582891e0c833d14a0608f07c9c6b3e/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/379cfd26655dd05bb6fe77718e3e0b176ae249db6aa2a0aaa725a5d4c46632df/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/eb470ca46fd658c413e9a637d23e59d3de32248a2d2fd0899e7bae8746342c40/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/9ae8abd00e9626cbc6dde7d22b1af51c7f46febaa755f21e9af6f59a29730d91/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/03593fffb9987466b8b255dd671fbb77fe7f538ed775828ec243a07a8fa3175f/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/d3721ece25f4f0577f4c0ce4111717e58c4557f42495e571877c4ec97c143e5d/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/a49f022f9dc9998a18aa4e20bcf1621bb8030423f58749ed8db8dbf6f0a7e347/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/50bc6778a006e024006a8fe0e6731feb666f5db2013c57695a36841f84eca7d5/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/3c584365d587eb8e95d5ee4277cedc4cca8ab3dfdb2031f4df9ec082c0413e89/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/09aa8402b98046f27aaa1ec34cb9880943b835851d48f2d0bebfbd5237d93b6d/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/0cc5e5abdb51c752dbcd815ba65a1973271add186ac77d9b39040963eaae2d25/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/e10612fb79634bb936212dfe8d8f406866769ff3b0cb2ae7b19975e3b0dd9d17/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/b3233cb7c6991126e7ce01484d1f761d6d59fb11973dc416553878e0fcc2ecd3/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/9ceeeaa22c4b429f0802f4fa70a4b42337ee22c56e0536f164e09824e9cce91c/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/f6469ff639b9d30f3fd67ff985c24909761b5d6909287572607d8a7608ee3ea7/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/fe9326378651a3f75b513a909e4182d9c38f18ab6ec587e3a443c4a36138922f/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/15f82e8cc0b7ac1436967af7c002e453041d674addbfbf7f1c2a6708af43daf7/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/df2da28c5102c3b5ab43d732a904a48f475f712c63b83bba4e6fba46022de7e4/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/487645ad37c5170facaaa43bf69fc2ff11693f9cdae41ee15adb2b007c2c8f03/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/6ed26463aa42cb7c0b45f87451b1c7e38ca11bea5f9f396f2f480c2a8dbd0af5/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/ea8a1e53139f9f605add442eb7b73ccee94ca7ba23dd67b8985dfbd6bafccc4d/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/73f835f6c3385e1248afded779a3e75279d8febc242982e64e28a9ece1acb757/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/ce5eabd278328a895df22096c54985358aea8f701d3717630171dea8db9994cd/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/9daf0cdeed0732aebaf46c14db86e14882c37da472e82cdf3c2dcf69cfebd82b/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/5dde131b19fce3b7268ba74b9c38f7aaeef0c4092b3ea3fe3bc0098a470ff115/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/5a1251b3b82ecf42a8af8cd4925af9d51cb978755af6fc421b294fd232af4473/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/322093f65919cab2eeb24c9a368bae45fe248ee6d32bf9602dc905d48bc7d5cb/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/48df47944d0ba5c9b2ed50b9ceb79c05d57261a6fe3d1d59084404ec3a71907e/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/fd8a34a6bf7cc7da10bb5f8a730a64d6d49a52499cf676ea2c5a121ce8ca7ccb/merged
+//192.168.1.15/Disk6               7.2T  497G  6.7T   7% /mnt/data2/movies
+//192.168.1.14/disk2               3.6T  1.2T  2.4T  34% /mnt/data2/tv
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/34ef9690aeb5a745c07a8d47ffd3195b02455d740a3735282d44d54a8e8e994f/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/5e40f110b577950c26412d53f92d790ab8e51bdc097e6dc73c4a14b225499669/merged
+/dev/mapper/jbodvg-jbodlv          916G  250G  621G  29% /mnt/jbod1tb
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/0f6411b0b9820c584cfa64256bac514cd117a31015993f6064f9079809a21b58/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/779f578055d215421d718acfe0b07b708c8a05e6f66ef28be1aa510d7a6866f6/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/512a67bcc49fe97af16a16adbfe6897a57f6bdd97c8e93ca85d2e36e83d76829/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/a31ba8dcb83361c51dfc7ed00413d1b3a4ab2345005efadb5cde19555491548f/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/83afeaf1f31d47070139f40fab8da393a3a13e42a4d3a720c24610b471a483d9/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/822536eb52e65699f624e97b28a05748ccb01aa18fa1e9fa2cf07464bcdcf706/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/5cd846e7aa638e61ac93a13c5f80dc4c25ae2d62c2c06467318edbfbaa3afe95/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/caaa897bb86dcd8cb506ad5cbbcd9c66310c3fbe105be3c6b7d61feab217bfeb/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/f38d11192a7040f73905eaaa7811c3bdfb45bf0f4563bbe2f4d035018705b999/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/a514d7966f2ed23f26197041d3d434c0d5198da60c51e725276adeca88ca1b67/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/0025ec8d521481d4ce5520873911973d6b03fcbfa1eba76335269d5b629cce3e/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/f741144e139138dc3135844a2f232baaef5b4979c162f858bd7c90b6a5a15bc0/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/51ed0e985b5a2c8539593b7087ff2e48206a2a78609e47f2d796c7bf694d4bb9/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/aac27929959f1fa8fa247d230739dc55cff53699933c36a5ce27a6fc0b19dfb2/merged
+overlay                            5.5T  1.7T  3.5T  33% /mnt/data1/docker/overlay2/5ae8b900e6167c061706e812101e1fc119a764ce708dee1be2f2e31d3724e91e/merged
